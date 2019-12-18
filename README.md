@@ -22,3 +22,16 @@ Validator::make(['phone_number' => $phone_number], ['phone_number' => new PhoneN
 ```php
 Validator::make(['postcode' => $postcode], ['postcode' => new Postcode()]);
 ```
+
+## Translation
+
+Translate validation messages with `resources/lang/ja/validation.php`
+
+```php
+<?php
+
+return [
+    'jp_postcode'          => ':attributeは正しい郵便番号の形式を指定してください。',
+    'jp_phone_number'      => ':attributeは正しい電話番号の形式を指定してください。',
+];
+```
