@@ -44,6 +44,6 @@ class PhoneNumber implements Rule
      */
     public function message()
     {
-        return ':attribute must be Japanese phone number.';
+        return ':attribute must be Japanese phone number format.';
     }
 }
