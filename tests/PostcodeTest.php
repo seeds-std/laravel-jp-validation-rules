@@ -19,9 +19,9 @@ class PostTest extends TestCase
     }
 
     /**
-     * @return void
+     * @test
      */
-    public function testPostcode()
+    public function it_validates_jp_postcode()
     {
         $this->assertTrue($this->validator('111-22223')->fails());
 
