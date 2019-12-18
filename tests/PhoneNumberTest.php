@@ -10,10 +10,10 @@ class PhoneNumberTest extends TestCase
 {
     /**
      * @param $phone_number
-     * @param mixed ...$params
+     * @param mixed $params
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator($phone_number, ...$params)
+    protected function validator($phone_number, $params = [])
     {
         return Validator::make(['phone_number' => $phone_number], ['phone_number' => new PhoneNumber($params)]);
     }

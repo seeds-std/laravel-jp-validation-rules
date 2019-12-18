@@ -7,18 +7,23 @@ use Illuminate\Contracts\Validation\Rule;
 class PhoneNumber implements Rule
 {
     /**
-     * @var bool
+     * @var array
      */
-    protected $allow_country_code;
+    protected $configs;
 
     /**
      * Create a new rule instance.
      *
+     * @param array $configs
      * @return void
      */
-    public function __construct($allow_contry_code = false)
+    public function __construct(array $configs = [])
     {
-        $this->allow_country_code = $allow_contry_code;
+        $default_configs = [
+            'allow_country_code' => false,
+        ];
+
+        $this->configs = array_merge($default_configs, $configs);
     }
 
     /**
@@ -30,7 +35,7 @@ class PhoneNumber implements Rule
      */
     public function passes($attribute, $value)
     {
-        if ($this->allow_country_code) {
+        if ($this->configs['allow_country_code']) {
             return (bool)preg_match('/^\+?81\d{1,4}[-\s]?\d{1,4}[-\s]?\d{1,4}$/', $value);
         }
 

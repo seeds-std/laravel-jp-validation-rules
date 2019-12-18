@@ -10,10 +10,10 @@ class PostTest extends TestCase
 {
     /**
      * @param $postcode
-     * @param mixed ...$params
+     * @param $params
      * @return \Illuminate\Contracts\Validation\Validator
      */
-    protected function validator($postcode, ...$params)
+    protected function validator($postcode, $params = [])
     {
         return Validator::make(['postcode' => $postcode], ['postcode' => new Postcode()]);
     }

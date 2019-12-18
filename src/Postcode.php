@@ -7,13 +7,21 @@ use Illuminate\Contracts\Validation\Rule;
 class Postcode implements Rule
 {
     /**
+     * @var array
+     */
+    protected $configs;
+
+    /**
      * Create a new rule instance.
      *
+     * @param array $configs
      * @return void
      */
-    public function __construct()
+    public function __construct(array $configs = [])
     {
-        //
+        $default_configs = [];
+
+        $this->configs = array_merge($default_configs, $configs);
     }
 
     /**
