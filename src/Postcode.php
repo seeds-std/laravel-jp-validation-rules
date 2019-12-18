@@ -35,6 +35,6 @@ class Postcode implements Rule
      */
     public function message()
     {
-        return ':attribute must be Japanese postcode format.';
+        return 'The :attribute must be Japanese postcode format.';
     }
 }
