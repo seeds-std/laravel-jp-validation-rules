@@ -14,13 +14,17 @@ composer require seeds-std/laravel-jp-validation-rules
 ### PhoneNumber
 
 ```php
-Validator::make(['phone_number' => $phone_number], ['phone_number' => new PhoneNumber($params)]);
+Validator::make(['phone_number' => '0120123456'], ['phone_number' => new PhoneNumber()]);
+```
+
+```php
+Validator::make(['phone_number' => '+81120123456'], ['phone_number' => new PhoneNumber(['allow_country_code' => true])]);
 ```
 
 ### Postcode
 
 ```php
-Validator::make(['postcode' => $postcode], ['postcode' => new Postcode()]);
+Validator::make(['postcode' => '111-2222'], ['postcode' => new Postcode()]);
 ```
 
 ## Translation
