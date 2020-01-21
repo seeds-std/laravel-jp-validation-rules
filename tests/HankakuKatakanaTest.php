@@ -43,7 +43,6 @@ class HankakuKatakanaTest extends TestCase
         $this->assertTrue($this->validator('やまだたろう')->fails());
     }
 
-
     /**
      * @test
      */

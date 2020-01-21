@@ -42,7 +42,6 @@ class HiraganaTest extends TestCase
         $this->assertTrue($this->validator('やまだたろう')->passes());
     }
 
-
     /**
      * @test
      */
