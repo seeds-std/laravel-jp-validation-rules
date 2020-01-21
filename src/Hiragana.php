@@ -43,6 +43,6 @@ class Hiragana implements Rule
      */
     public function message()
     {
-        return __('validation.jp_hiragana');
+        return __('validation.hiragana');
     }
 }

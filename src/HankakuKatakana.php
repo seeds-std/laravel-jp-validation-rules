@@ -43,6 +43,6 @@ class HankakuKatakana implements Rule
      */
     public function message()
     {
-        return __('validation.jp_hankaku_katakana');
+        return __('validation.hankaku_katakana');
     }
 }
