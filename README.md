@@ -11,6 +11,24 @@ composer require seeds-std/laravel-jp-validation-rules
 
 ## Usage
 
+### Hiragana
+
+```php
+Validator::make(['name' => $string], ['name' => new Hiragana('やまだたろう')]);
+```
+
+### ZenkakuKatakana
+
+```php
+Validator::make(['name' => $string], ['name' => new ZenkakuKatakana('ヤマダタロウ')]);
+```
+
+### HankakuKatakana
+
+```php
+Validator::make(['name' => $string], ['name' => new HankakuKatakana('ﾔﾏﾀﾞﾀﾛｳ')]);
+```
+
 ### PhoneNumber
 
 ```php
@@ -35,6 +53,9 @@ Translate validation messages with `resources/lang/ja/validation.php`
 <?php
 
 return [
+    'hiragana'             => ':attributeはひらがなを指定してください。',
+    'zenkaku_katakana'     => ':attributeは全角カタカナを指定してください。',
+    'hankaku_katakana'     => ':attributeは半角カタカナを指定してください。',
     'jp_postcode'          => ':attributeは正しい郵便番号の形式を指定してください。',
     'jp_phone_number'      => ':attributeは正しい電話番号の形式を指定してください。',
 ];
