@@ -14,19 +14,19 @@ composer require seeds-std/laravel-jp-validation-rules
 ### Hiragana
 
 ```php
-Validator::make(['name' => $string], ['name' => new Hiragana('やまだたろう')]);
+Validator::make(['name' => $string], ['name' => new \SeedsStd\JpValidationRules\Hiragana('やまだたろう')]);
 ```
 
 ### ZenkakuKatakana
 
 ```php
-Validator::make(['name' => $string], ['name' => new ZenkakuKatakana('ヤマダタロウ')]);
+Validator::make(['name' => $string], ['name' => new \SeedsStd\JpValidationRules\ZenkakuKatakana('ヤマダタロウ')]);
 ```
 
 ### HankakuKatakana
 
 ```php
-Validator::make(['name' => $string], ['name' => new HankakuKatakana('ﾔﾏﾀﾞﾀﾛｳ')]);
+Validator::make(['name' => $string], ['name' => new \SeedsStd\JpValidationRules\HankakuKatakana('ﾔﾏﾀﾞﾀﾛｳ')]);
 ```
 
 ### PhoneNumber
