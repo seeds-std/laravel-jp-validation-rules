@@ -22,33 +22,33 @@ Validator::make(['name' => 'やまだたろう'], ['name' => new \SeedsStd\JpVal
 
 ```php
 Validator::make(['name' => 'ヤマダタロウ'], ['name' => new \SeedsStd\JpValidationRules\ZenkakuKatakana()])
-    ->passes(); // true;
+    ->passes(); // true
 ```
 
 ### HankakuKatakana
 
 ```php
 Validator::make(['name' => 'ﾔﾏﾀﾞﾀﾛｳ'], ['name' => new \SeedsStd\JpValidationRules\HankakuKatakana()])
-    ->passes(); // true;
+    ->passes(); // true
 ```
 
 ### PhoneNumber
 
 ```php
 Validator::make(['phone_number' => '0120123456'], ['phone_number' => new \SeedsStd\JpValidationRules\PhoneNumber()])
-    ->passes(); // true;
+    ->passes(); // true
 ```
 
 ```php
 Validator::make(['phone_number' => '+81120123456'], ['phone_number' => new \SeedsStd\JpValidationRules\PhoneNumber(['allow_country_code' => true])])
-    ->passes(); // true;
+    ->passes(); // true
 ```
 
 ### Postcode
 
 ```php
 Validator::make(['postcode' => '111-2222'], ['postcode' => new \SeedsStd\JpValidationRules\Postcode()])
-    ->passes(); // true;
+    ->passes(); // true
 ```
 
 ## Translation
